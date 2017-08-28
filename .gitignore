@@ -1,4 +1,5 @@
 .env
+*.xls
 node_modules
 dist
 jest
