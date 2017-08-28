@@ -1,0 +1,128 @@
+{
+  "name": "alko-product-api",
+  "version": "0.1.0",
+  "description": "Alko products as an API",
+  "keywords": [
+    "Babel",
+    "ES6",
+    "JSON API",
+    "Koa better-router",
+    "Koa",
+    "Koajs"
+  ],
+  "author": "Wille Ristimäki <villeristimaki@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:villeristi/alko-product-api.git"
+  },
+  "scripts": {
+    "start": "babel-watch --watch src src/index.js",
+    "importData": "babel-watch --watch src src/modules/import/importData.js",
+    "build": "yarn lint && babel --no-babelrc src -d dist --presets=env,stage-0 --plugins=transform-async-to-generator --minified --quiet",
+    "lint": "eslint src"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "dotenv": "^4.0.0",
+    "joi": "^10.6.0",
+    "jsonapi-serializer": "^3.5.5",
+    "koa": "^2.3.0",
+    "koa-better-body": "^3.0.4",
+    "koa-better-router": "^2.1.1",
+    "koa-cors": "0.0.16",
+    "koa-helmet": "^3.2.0",
+    "koa-json-error": "^3.1.2",
+    "mongoose": "^4.10.8",
+    "mongoose-paginate": "^5.0.3",
+    "xlsx": "^0.11.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^7.2.3",
+    "babel-plugin-module-resolver": "^2.7.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-watch": "^2.0.7",
+    "debug": "^3.0.0",
+    "eslint": "^4.5.0",
+    "morgan": "^1.8.2",
+    "util": "^0.10.3"
+  },
+  "babel": {
+    "sourceMaps": "inline",
+    "presets": [
+      "env",
+      "stage-0"
+    ],
+    "plugins": [
+      [
+        "transform-async-to-generator"
+      ],
+      [
+        "module-resolver",
+        {
+          "root": [
+            "."
+          ],
+          "alias": {
+            "src": "./src"
+          }
+        }
+      ]
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended"
+    ],
+    "env": {
+      "browser": false,
+      "es6": true,
+      "node": true
+    },
+    "parser": "babel-eslint",
+    "rules": {
+      "array-bracket-spacing": [
+        2,
+        "never"
+      ],
+      "arrow-parens": [
+        "error",
+        "always"
+      ],
+      "comma-dangle": [
+        2,
+        "always-multiline"
+      ],
+      "eol-last": [
+        2,
+        "always"
+      ],
+      "indent": [
+        2,
+        2,
+        {
+          "SwitchCase": 1
+        }
+      ],
+      "no-console": 0,
+      "no-multiple-empty-lines": 2,
+      "object-curly-spacing": [
+        2,
+        "never"
+      ],
+      "quotes": [
+        2,
+        "single",
+        {
+          "avoidEscape": true,
+          "allowTemplateLiterals": true
+        }
+      ],
+      "display-name": 0
+    },
+    "plugins": []
+  }
+}
