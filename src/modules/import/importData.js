@@ -33,6 +33,7 @@ connectToMongoDB()
         'isNewInStock',
         'priceOrder',
         'type',
+        'subtype',
         'specialGroup',
         'beerType',
         'country',

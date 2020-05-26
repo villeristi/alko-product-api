@@ -1,5 +1,5 @@
 import Product from '../../models/Product';
-import {getSingleUrl, getToplevelLinks, stringifyQuery} from './util';
+import {getSingleUrl, getToplevelLinks} from './util';
 
 const PAGE_SIZE = 100;
 

@@ -1,7 +1,7 @@
 import mongoose from 'mongoose'
 // import util from 'util';
 
-import {debug, getEnv} from './util';
+import {getEnv} from './util';
 
 export default async () => {
   mongoose.Promise = Promise;

@@ -26,6 +26,7 @@ export default async (ctx) => {
         'pricePerLitre',
         'isNewInStock',
         'type',
+        'subtype',
         'specialGroup',
         'beerType',
         'country',

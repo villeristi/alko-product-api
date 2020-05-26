@@ -58,6 +58,10 @@ const ProductSchema = new mongoose.Schema({
     type: String,
     index: true,
   },
+  subtype: {
+    type: String,
+    index: true,
+  },
   specialGroup: {
     type: String,
     index: true,
