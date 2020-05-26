@@ -1,5 +1,5 @@
 import router from './config/router';
-import listProducts from './modules/product/listProducts';
+import listProducts from './modules/product/listproducts';
 import singleProduct from './modules/product/singleProduct';
 import {name, version} from '../package.json'
 
